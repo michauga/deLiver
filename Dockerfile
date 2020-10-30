@@ -1,5 +1,3 @@
-# podpinamy się pod jakiś już gotowy obraz
-# podstawowa konfiguracja
 FROM python:3-slim
 WORKDIR /app
 
