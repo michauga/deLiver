@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}Rejestracja sendera{% endblock %}
+
+{% block head %}
+    <script src="/static/main.js" defer></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Zarejestruj się</h2>
+    <form id="register-form" name="register-form" action="https://infinite-hamlet-29399.herokuapp.com/sender/register" 
+    method="POST" enctype="multipart/form-data">
+        <ul>
+            <div class="form-group">
+                <li><input type="text" id="firstname" name="firstname" placeholder="Imię" class="input-field" required></li>
+            </div>
+            <div id="firstname_err" class="error"></div>
+            <div class="form-group">
+                <li><input type="text" id="lastname" name="lastname" placeholder="Nazwisko" class="input-field" required></li>
+            </div>
+            <div id="lastname_err" class="error"></div>
+            <div class="form-group">
+                <li><input type="password" id="password" name="password" placeholder="Hasło" class="input-field" required></li>
+            </div>
+            <div id="password_err" class="error"></div>
+            <div class="form-group">
+                <li><input type="password" id="password2" name="password2" placeholder="Powtórz hasło" class="input-field" required></li>
+            </div>
+            <div id="password2_err" class="error"></div>
+            <div class="form-group">
+                <div class="radio">
+                    <li>    
+                    <input type="radio" id="1" name="sex" value="M" required>
+                    <label for="1">Mężczyzna</label>
+                    <input type="radio" id="2" name="sex" value="K">
+                    <label for="2">Kobieta</label>
+                </li>
+                </div>
+            </div>
+            <div class="form-group">
+                    <li><input type="file" name="photo" id="photo" required></li>
+            </div>
+                <div class="form-group">
+                <li><input type="text" id="login" name="login" placeholder="Nazwa użytkownika" class="input-field" required></li>
+            </div>
+            <div id="login_err" class="error"></div>
+            <div id="login_availability_err" class="error"></div>
+                <li><button class="button"><input type="submit" name="submit" value="Zarejestruj się" class="register-btn"></button></li>
+            
+        </ul>
+    </form>
+</div>
+{% endblock %}
